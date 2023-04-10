@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+</head>
+<body>
+  <div class="topnav">
+    <div class="logo">
+      <h2>Simba Embeita</h2>
+    </div>
+
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div class="menu-icon">
+      <i class="fa fa-bars"></i>
+    </div>
+
+    <ul class="navbar">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Acerca de mi</a></li>
+      <li><a href="#">Lo que hago</a></li>
+      <li><a href="#">Resumen</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </div>
+
+  <div class="header">
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="profile">
+          <img src="./images/simba.jpg" alt="foto de perfil">
+          <h2>Simba Embeita</h2>
+        </div>
+        <ul class="nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Acerca de mi</a></li>
+          <li><a href="#">Lo que hago</a></li>
+          <li><a href="#">Resumen</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <h4>Bienvenido</h4>
+        <h1><span class="input"></span></h1>
+        <h4>Location: Casa, Argentina</h4>
+        <a href="#" class="btn">Contratame</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+
+  <script>
+    var typed=new Typed(".input",{
+      strings:["Simba Embeita", "Pichicho", "UX Designer", "Web Developer"],
+      typeSpeed:65,
+      backSpeed: 55,
+      loop:true
+    })
+
+    let menuicon=document.querySelector(".menu-icon");
+    let navbar=document.querySelector(".navbar");
+    let icon=document.querySelector(".menu-icon i");
+
+    menuicon.addEventListener("click",function(){
+      navbar.classList.toggle("open");
+      if(icon.classList.contains("fa-bars"))
+      {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+      }
+      else{
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      }
+    })
+  </script>
+</body>
+</html>
+
